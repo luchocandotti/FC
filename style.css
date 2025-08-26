@@ -1,0 +1,137 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+  
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+body {
+    font-family: "Merriweather Sans", sans-serif;
+    font-size: 14px;
+    line-height: 25px;
+}
+
+.tapa {
+    width: 100vh;
+    height: 50vh;
+    transform: translateY(-49vh);
+    background-color: #FFF;
+}
+
+.logo {
+    width: 150px;
+    height: auto;
+}
+
+h3 {
+    font-size: 18px;
+}
+
+h4 {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 23px;
+}
+
+p, li {
+    font-weight: 300;
+}
+li {
+    list-style: none;
+    font-size: 14px;
+    line-height: 30px;
+
+    & i {
+        color: #7777B6;
+    }
+}
+
+a {
+    text-decoration: none;
+    color: #FFF;
+    &:hover{
+        text-decoration: underline;
+    }
+}
+
+.btn {
+    text-transform: uppercase;
+    transition: all 0.5s ease;
+}
+.menu .btn {
+    font-size: 12px;
+    background-color: #ececec;
+}
+.menu .btn:hover {
+    color: #FFF;
+    transform: translate(0,-5px);
+}
+.menu .btn:nth-child(1):hover { 
+    background-color: #7777B6;
+}
+.menu .btn:nth-child(2):hover { 
+    background-color: #61351F;
+}
+.menu .btn:nth-child(3):hover { 
+    background-color: #2E611F;
+}
+.menu .btn:nth-child(4):hover { 
+    background-color: #1F1F62;
+}
+
+#btn-movil{
+    background-color: #7777B6;
+}
+#movil .btn:hover{
+    color: #FFF;
+    background-color: #1F1F62;
+}
+
+#movil {
+    & .btn {
+        font-size: 12px;
+        width: 200px;
+        height: 40px;
+    }
+    transform: translateY(-50vh);
+    transition: all 0.6s ease-in-out;
+}
+#intro {
+    transition: all 0.5s ease-in-out;
+}
+
+#explica {
+    scroll-margin-top: 40px;
+}
+
+.bg-lila {
+    background-color: #7777B6;
+}
+.bg-azul {
+    background-color: #1F1F62;
+}
+
+.btn-servicios {
+    background-color: #1F1F62;
+    border: none;
+    transition: all 0.5s ease;
+
+    &:hover{
+        background-color: #7777B6;
+    }
+}
+
+.nomuestra {
+    visibility: hidden;
+    height: 0;
+    overflow: hidden;
+}
+
+@media(max-width:576px) {
+    .container {
+        padding: 0 40px 0 40px;
+    }
+}
