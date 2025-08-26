@@ -29,6 +29,18 @@ btnmenu.addEventListener('click', () => {
     }
 })
 
+document.getElementById('servicio-1').addEventListener('click', function() {
+ this.classList.toggle('expanded')
+})
+
+document.getElementById('servicio-2').addEventListener('click', function() {
+ this.classList.toggle('expanded')
+})
+
+document.getElementById('servicio-3').addEventListener('click', function() {
+ this.classList.toggle('expanded')
+})
+
 
 
 

@@ -103,6 +103,14 @@ a {
     transition: all 0.5s ease-in-out;
 }
 
+.collapse-content {
+  height: 70px;
+  transition: height 0.5s ease-in-out;
+}
+.collapse-content.expanded {
+  height: 500px;
+}
+
 #explica {
     scroll-margin-top: 40px;
 }
@@ -113,16 +121,13 @@ a {
 .bg-azul {
     background-color: #1F1F62;
 }
-
-.btn-servicios {
-    background-color: #1F1F62;
-    border: none;
-    transition: all 0.5s ease;
-
-    &:hover{
-        background-color: #7777B6;
-    }
+.bg-verde {
+    background-color: #2E611F;
 }
+.bg-marron {
+    background-color: #61351F;
+}
+
 
 .nomuestra {
     visibility: hidden;
