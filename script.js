@@ -29,73 +29,42 @@ btnmenu.addEventListener('click', () => {
     }
 })
 
-document.getElementById('servicio-1').addEventListener('click', function() {
- this.classList.toggle('expanded')
+
+const servicio1 = document.getElementById('servicio-1')
+const servicio2 = document.getElementById('servicio-2')
+const servicio3 = document.getElementById('servicio-3')
+let element = ''
+
+servicio1.addEventListener('click', function () {
+    element = this
+    toggleCollapse(element)
 })
 
-document.getElementById('servicio-2').addEventListener('click', function() {
- this.classList.toggle('expanded')
+servicio2.addEventListener('click', function() {
+    element = this
+    toggleCollapse(element)
 })
 
-document.getElementById('servicio-3').addEventListener('click', function() {
- this.classList.toggle('expanded')
+servicio3.addEventListener('click', function() {
+    element = this
+    toggleCollapse(element)
 })
 
+function toggleCollapse(element) {
+    if (element.style.height && element.style.height !== "70px") {
+        collapse(element)
+        setTimeout(() => {
+            element.children[1].classList.toggle('nomuestra')
+        }, 500)
+    } else {
+        expand(element)
+    }
+}
 
-
-
-
-
-
-// let servicio = 'servicio-1';
-// let servicioPrevio = 'servicio-1';
-// let boton = 'btn-servicio-1';
-// let botonPrevio = 'btn-servicio-1';
-
-// function menuServicios() {
-//     document.getElementById(servicio).classList.remove('nomuestra');
-//     document.getElementById(servicioPrevio).classList.add('nomuestra');
-//     document.getElementById(botonPrevio).classList.remove('fw-bold');
-//     document.getElementById(boton).classList.add('fw-bold');
-// }
-
-
-// document.getElementById('btn-servicio-1').addEventListener('click', () => {
-//     if (servicio !== 'servicio-1') {
-//         servicioPrevio = servicio;
-//         botonPrevio = boton;
-//         boton = 'btn-servicio-1';
-//         servicio = 'servicio-1';
-//         menuServicios();
-//     }
-// })
-
-// document.getElementById('btn-servicio-2').addEventListener('click', () => {
-//     if (servicio !== 'servicio-2') {
-//         servicioPrevio = servicio;
-//         botonPrevio = boton;
-//         boton = 'btn-servicio-2';
-//         servicio = 'servicio-2';
-//         menuServicios();
-//     }
-// })
-
-// document.getElementById('btn-servicio-3').addEventListener('click', () => {
-//     if (servicio !== 'servicio-3') {
-//         servicioPrevio = servicio;
-//         botonPrevio = boton;
-//         boton = 'btn-servicio-3';
-//         servicio = 'servicio-3';
-//         menuServicios();
-//     }
-// })
-
-// document.getElementById('btn-servicio-4').addEventListener('click', () => {
-//     if (servicio !== 'servicio-4') {
-//         servicioPrevio = servicio;
-//         botonPrevio = boton;
-//         boton = 'btn-servicio-4';
-//         servicio = 'servicio-4';
-//         menuServicios();
-//     }
-// })
+function expand(element) {
+    element.children[1].classList.toggle('nomuestra')
+    element.style.height = element.scrollHeight + 'px'
+}
+function collapse(element) {
+    element.style.height = '70px'
+}
